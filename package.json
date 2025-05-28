@@ -1,0 +1,24 @@
+{
+  "name": "script-gitrestapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "start": "node calculator.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-test-company-2/my-project-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/my-test-company-2/my-project-calculator/issues"
+  },
+  "homepage": "https://github.com/my-test-company-2/my-project-calculator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
