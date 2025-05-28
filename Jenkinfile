@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', url: 'https://github.com/my-test-company-2/my-project-calculator.git'
+      }
+    }
+
+    stage('Build') {
+      steps {
+          sh 'docker build -t calculator .'
+       }
+    }
+    stage('Run test') {
+      steps {
+          script{
+           sh 'docker run --rm calculator npm test'
+  
+          }
+      }
+       
+    }    
+  }
+}
