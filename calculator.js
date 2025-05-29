@@ -6,7 +6,11 @@ function subtract(a, b) {
   return a - b;
 }
 
-module.exports = { add, subtract };
+function multiply(a, b) {
+  return a * b;
+}
+
+module.exports = { add, subtract, multiply };
 
 // CLI code (for user interaction)
 if (require.main === module) {
@@ -26,9 +30,11 @@ if (require.main === module) {
       } else {
         console.log(`✅ Add: ${a} + ${b} = ${add(a, b)}`);
         console.log(`✅ Subtract: ${a} - ${b} = ${subtract(a, b)}`);
+        console.log(`✅ Multiply: ${a} * ${b} = ${multiply(a, b)}`);
       }
 
       rl.close();
     });
   });
 }
+
