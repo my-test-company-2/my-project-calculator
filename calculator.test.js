@@ -1,4 +1,4 @@
-const { add, subtract, multiply } = require('./calculator');
+const { add, subtract, multiply, divide } = require('./calculator');
 
 describe('Calculator Tests', () => {
   test('adds 5 + 3 to equal 8', () => {
@@ -23,5 +23,17 @@ describe('Calculator Tests', () => {
 
   test('multiplies -3 * 6 to equal -18', () => {
     expect(multiply(-3, 6)).toBe(-18);
+  });
+
+  test('divides 10 / 2 to equal 5', () => {
+    expect(divide(10, 2)).toBe(5);
+  });
+
+  test('divides -9 / 3 to equal -3', () => {
+    expect(divide(-9, 3)).toBe(-3);
+  });
+
+  test('division by zero returns error message', () => {
+    expect(divide(5, 0)).toBe('❌ Cannot divide by zero');
   });
 });
