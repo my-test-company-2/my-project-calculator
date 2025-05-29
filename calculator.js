@@ -10,7 +10,14 @@ function multiply(a, b) {
   return a * b;
 }
 
-module.exports = { add, subtract, multiply };
+function divide(a, b) {
+  if (b === 0) {
+    return '❌ Cannot divide by zero';
+  }
+  return a / b;
+}
+
+module.exports = { add, subtract, multiply, divide };
 
 // CLI code (for user interaction)
 if (require.main === module) {
@@ -31,6 +38,7 @@ if (require.main === module) {
         console.log(`✅ Add: ${a} + ${b} = ${add(a, b)}`);
         console.log(`✅ Subtract: ${a} - ${b} = ${subtract(a, b)}`);
         console.log(`✅ Multiply: ${a} * ${b} = ${multiply(a, b)}`);
+        console.log(`✅ Divide: ${a} / ${b} = ${divide(a, b)}`);
       }
 
       rl.close();
